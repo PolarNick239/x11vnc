@@ -30,7 +30,11 @@
 #include <stdlib.h>
 #include <string.h>
 #include "rfb.h"
+
+#ifndef TIGHT_TURBOJPEG_PRAGMA_ONCE_GUARD
+#define TIGHT_TURBOJPEG_PRAGMA_ONCE_GUARD
 #include "turbojpeg.h"
+#endif
 
 /* Note: The following constant should not be changed. */
 #define TIGHT_MIN_TO_COMPRESS 12
