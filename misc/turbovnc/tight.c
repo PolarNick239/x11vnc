@@ -352,6 +352,17 @@ rfbSendRectEncodingTight(cl, x, y, w, h)
     return SendRectSimple(cl, x, y, w, h);
 }
 
+rfbBool
+rfbSendRectEncodingTightPng(rfbClientPtr cl,
+                         int x,
+                         int y,
+                         int w,
+                         int h)
+{
+    cl->tightEncoding = rfbEncodingTightPng;
+    return rfbSendRectEncodingTight(cl, x, y, w, h);
+}
+
 static void
 FindBestSolidArea(x, y, w, h, colorValue, w_ptr, h_ptr)
     int x, y, w, h;
